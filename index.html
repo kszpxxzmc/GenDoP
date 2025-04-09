@@ -42,6 +42,17 @@
 </head>
 <body>
 
+<script>
+  $(window).on('load', function () {
+      bulmaCarousel.attach('#results-carousel-horizontal', {
+          slidesToScroll: 1,
+          slidesToShow: 1,
+          loop: true,
+          autoplay: false,
+      });
+  });
+</script>
+
 <!-- <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
@@ -435,11 +446,11 @@
       <div class="container">
 
         <div id="results-carousel-horizontal" class="carousel results-carousel">
-          <img src="./static/images/t2t-case4.png" alt="Trajectory 4" width="100%" preload>
-          <img src="./static/images/t2t-case5.png" alt="Trajectory 5" width="100%" preload>
-          <img src="./static/images/t2t-case2.png" alt="Trajectory 2" width="100%" preload>
-          <img src="./static/images/t2t-case1.png" alt="Trajectory 1" width="100%" preload>    
-          <img src="./static/images/t2t-case3.png" alt="Trajectory 3" width="100%" preload>
+          <img src="./static/images/t2t-case4.png" alt="Trajectory 4" width="100%" class="carousel-image" preload>
+          <img src="./static/images/t2t-case5.png" alt="Trajectory 5" width="100%" class="carousel-image" preload>
+          <img src="./static/images/t2t-case2.png" alt="Trajectory 2" width="100%" class="carousel-image" preload>
+          <img src="./static/images/t2t-case1.png" alt="Trajectory 1" width="100%" class="carousel-image" preload>    
+          <img src="./static/images/t2t-case3.png" alt="Trajectory 3" width="100%" class="carousel-image" preload>
         </div>
 
       </div>
@@ -452,33 +463,25 @@
     </div>
 
 
-
-    <!-- Text-to-Trajectory -->
-    <!-- <h3 class="title is-4">RGBD & Text-conditioned</h3>
+    <h3 class="title is-4">RGBD & Text-conditioned</h3>
     <div class="content has-text-justified">
       <div class="container">
-
         <div id="results-carousel-horizontal" class="carousel results-carousel">
-      
-          <img src="./static/images/vi_p1.jpg" alt="Trajectory 1" width="100%" preload>
-      
-          <img src="./static/images/vi_p2.jpg" alt="Trajectory 2" width="100%" preload>
-      
-          <img src="./static/images/vi_p3.jpg" alt="Trajectory 3" width="100%" preload>
-      
-          <img src="./static/images/vi_p4.jpg" alt="Trajectory 4" width="100%" preload>
-      
-          <img src="./static/images/vi_p5.jpg" alt="Trajectory 5" width="100%" preload>
-      
-          <img src="./static/images/vi_p6.jpg" alt="Trajectory 6" width="100%" preload>
-      
-          <img src="./static/images/vi_p7.jpg" alt="Trajectory 7" width="100%" preload>
-      
+          <img src="./static/images/i2t-case1.png" alt="Trajectory 1" class="carousel-image" preload>
+          <img src="./static/images/i2t-case2.png" alt="Trajectory 2" class="carousel-image" preload>
+          <img src="./static/images/i2t-case3.png" alt="Trajectory 3" class="carousel-image" preload>
+          <img src="./static/images/i2t-case4.png" alt="Trajectory 4" class="carousel-image" preload>
         </div>
-  
       </div>
-  
-    </div> -->
+    </div>
+
+    <style>
+    .carousel-image {
+      flex: 0 0 50%; /* 每张图片占容器50%宽度 */
+      min-width: 50%; /* 防止图片缩小 */
+      padding: 0 0%; /* 添加图片间距 */
+    }
+    </style>
 
     <!-- Text-to-Trajectory -->
     <h3 class="title is-4">Application</h3>
@@ -487,23 +490,23 @@
 
         <div id="results-carousel-horizontal" class="carousel results-carousel">
   
-          <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+          <video muted autoplay="autoplay" loop="loop" width="100%" class="carousel-image" preload controls>
               <source src="./static/images/application-case1.mov" type="video/mp4">
           </video>
   
-          <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+          <video muted autoplay="autoplay" loop="loop" width="100%" class="carousel-image" preload controls>
               <source src="./static/images/application-case2.mov" type="video/mp4">
           </video>
   
-          <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+          <video muted autoplay="autoplay" loop="loop" width="100%" class="carousel-image" preload controls>
               <source src="./static/images/application-case5.mov" type="video/mp4">
           </video>
   
-          <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+          <video muted autoplay="autoplay" loop="loop" width="100%" class="carousel-image" preload controls>
               <source src="./static/images/application-case3.mov" type="video/mp4">
           </video>
   
-          <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+          <video muted autoplay="autoplay" loop="loop" width="100%" class="carousel-image" preload controls>
               <source src="./static/images/application-case4.mov" type="video/mp4">
           </video>
   
@@ -516,46 +519,6 @@
       </p>
     </div>
 
-    <!-- Image-to-Trajectory
-    <h3 class="title is-4">Image-to-Trajectory</h3>
-    <div class="content has-text-justified">
-      <div class="container">
-
-        <div id="results-carousel-horizontal" class="carousel results-carousel">
-  
-          <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
-              <source src="./static/videos/vi_p1.mp4" type="video/mp4">
-          </video>
-  
-          <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
-              <source src="./static/videos/vi_p2.mp4" type="video/mp4">
-          </video>
-  
-          <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
-              <source src="./static/videos/vi_p3.mp4" type="video/mp4">
-          </video>
-  
-          <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
-              <source src="./static/videos/vi_p4.mp4" type="video/mp4">
-          </video>
-  
-          <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
-              <source src="./static/videos/vi_p5.mp4" type="video/mp4">
-          </video>
-  
-          <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
-            <source src="./static/videos/vi_p6.mp4" type="video/mp4">
-          </video>
-  
-          <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
-            <source src="./static/videos/vi_p7.mp4" type="video/mp4">
-          </video>
-  
-        </div>
-  
-      </div>
-  
-    </div> -->
   </div>
 </section>
 

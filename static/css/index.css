@@ -115,6 +115,7 @@ body {
 }
 
 .results-carousel .item {
+  flex: 0 0 calc(50% - 5px); /* 每个item占容器50%宽度减去间距 */
   margin: 5px;
   overflow: hidden;
   border: 1px solid #bbb;
