@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
-  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+        content="GenDoP: Auto-regressive Camera Trajectory Generation as a Director of Photography">
+  <meta name="keywords" content="Auto-regressive Model, Camera Trajectory Generation">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nerfies: Deformable Neural Radiance Fields</title>
+  <title>GenDoP: Auto-regressive Camera Trajectory Generation as a Director of Photography</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -42,7 +42,7 @@
 </head>
 <body>
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
+<!-- <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
       <span aria-hidden="true"></span>
@@ -80,7 +80,7 @@
     </div>
 
   </div>
-</nav>
+</nav> -->
 
 
 <section class="hero">
@@ -88,39 +88,40 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Nerfies: Deformable Neural Radiance Fields</h1>
+          <h1 class="title is-1 publication-title">GenDoP: Auto-regressive Camera Trajectory Generation as a Director of
+            Photography</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
+              <a href="https://kszpxxzmc.github.io">Mengchen Zhang</a><sup>1,2</sup>,</span>
             <span class="author-block">
-              <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span>
+              <a href="https://wutong16.github.io">Tong Wu✉️</a><sup>3</sup>,</span>
             <span class="author-block">
-              <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>,
+              <a href="https://sparkstj.github.io/">Jing Tan</a><sup>4</sup>,
             </span>
             <span class="author-block">
-              <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>,
+              <a href="https://liuziwei7.github.io/">Ziwei Liu</a><sup>5</sup>,
             </span>
             <span class="author-block">
-              <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>,
+              <a href="https://stanford.edu/~gordonwz/">Gordon Wetzstein</a><sup>3</sup>,
             </span>
             <span class="author-block">
-              <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
+              <a href="http://dahua.site/">Dahua Lin✉️</a><sup>2,4</sup>,
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>University of Washington,</span>
-            <span class="author-block"><sup>2</sup>Google Research</span>
+            <span class="author-block"><sup>1</sup>Zhejiang University,</span>
+            <span class="author-block"><sup>2</sup>Shanghai Artificial Intelligence Laboratory,</span>
+            <span class="author-block"><sup>3</sup>Stanford University,</span>
+            <span class="author-block"><sup>4</sup>The Chinese University of Hong Kong,</span>
+            <span class="author-block"><sup>5</sup>Nanyang Technological University</span>
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2011.12948"
+                <a href=""
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -129,7 +130,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2011.12948"
+                <a href=""
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -139,7 +140,7 @@
               </span>
               <!-- Video Link. -->
               <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                <a href="https://www.youtube.com/watch?v=UWvR_A7yFeI"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-youtube"></i>
@@ -149,7 +150,7 @@
               </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/google/nerfies"
+                <a href="https://github.com/3DTopia/GenDoP"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -159,7 +160,7 @@
               </span>
               <!-- Dataset Link. -->
               <span class="link-block">
-                <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                <a href=""
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="far fa-images"></i>
@@ -175,80 +176,6 @@
   </div>
 </section>
 
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
-                type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint
-        portraits.
-      </h2>
-    </div>
-  </div>
-</section>
-
-
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/steve.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/chair-tp.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/shiba.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/fullbody.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/blueshirt.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-mask">
-          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/mask.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/coffee.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-toby">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/toby2.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -258,198 +185,398 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
+            Camera trajectory design plays a crucial role in video production, serving as a fundamental tool for conveying directorial intent and enhancing visual storytelling. In cinematography, Directors of Photography meticulously craft camera movements to achieve expressive and intentional framing. However, existing methods for camera trajectory generation remain limited: Traditional approaches rely on geometric optimization or handcrafted procedural systems, while recent learning-based methods often inherit structural biases or lack textual alignment, constraining creative synthesis.
           </p>
           <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
+            In this work, we introduce an auto-regressive model inspired by the expertise of Directors of Photography to generate artistic and expressive camera trajectories.
+            We first introduce <b>DataDoP</b>, a large-scale multi-modal dataset containing 29K real-world shots with free-moving camera trajectories, depth maps, and detailed captions in specific movements, interaction with the scene, and directorial intent.
           </p>
           <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+            Thanks to the comprehensive and diverse database, we further train an auto-regressive, decoder-only Transformer for high-quality, context-aware camera movements generation based on text guidance and RGBD inputs, named <b>GenDoP</b>. Extensive experiments demonstrate that compared to existing methods, GenDoP offers better controllability, finer-grained trajectory adjustments, and higher motion stability. 
+            We believe our approach establishes a new standard for learning-based cinematography, paving the way for future advancements for camera control and filmmaking. Our code and data will be publicly available.
           </p>
         </div>
       </div>
     </div>
     <!--/ Abstract. -->
-
     <!-- Paper video. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
         <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <iframe src="https://www.youtube.com/embed/UWvR_A7yFeI?rel=0&amp;showinfo=0&amp;cc_load_policy=0&amp;vq=hd1080&amp;modestbranding=1&amp;playsinline=1&speed=0.75"
+              frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
       </div>
     </div>
     <!--/ Paper video. -->
+
+
+
   </div>
 </section>
 
 
 <section class="section">
   <div class="container is-max-desktop">
-
-    <div class="columns is-centered">
-
-      <!-- Visual Effects. -->
-      <div class="column">
-        <div class="content">
-          <h2 class="title is-3">Visual Effects</h2>
-          <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
-          </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/dollyzoom-stacked.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <!--/ Visual Effects. -->
-
-      <!-- Matting. -->
-      <div class="column">
-        <h2 class="title is-3">Matting</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              As a byproduct of our method, we can also solve the matting problem by ignoring
-              samples that fall outside of a bounding box during rendering.
-            </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-
-        </div>
-      </div>
-    </div>
-    <!--/ Matting. -->
-
+        
     <!-- Animation. -->
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Animation</h2>
-
-        <!-- Interpolating. -->
-        <h3 class="title is-4">Interpolating states</h3>
+        <h2 class="title is-3">Overview</h2>
         <div class="content has-text-justified">
+          <img src="./static/images/teaser_v3_00.png"/>
           <p>
-            We can also animate the scene by interpolating the deformation latent codes of two input
-            frames. Use the slider here to linearly interpolate between the left frame and the right
-            frame.
+            <b>Overview.</b>
+            <b>Top</b>: DataDoP data construction. 
+            Given RGB video frames, we extract RGBD images and camera poses, then tag the pose sequence with different motion categories (in different colors). With LLM, we generate two types of captions from motion tags and RGBD inputs: <i>Motion Caption</i> describes the camera movements, while <i>Directorial Caption</i> describes the <span style="color: rgb(56, 87, 35)"><b>camera movements</b></span> along with their <span style="color: rgb(31, 78, 121)"><b>interaction with the scene</b></span> and <span style="color: rgb(121, 48, 160)"><b>directorial intent</b></span>. 
+            <b>Bottom</b>: Our GenDoP method supports multi-modal inputs for trajectory creation. The generated camera sequence can be easily applied to various video generation tasks, including text-to-video (T2V) and image-to-video (I2V) generation. GenDoP paves the way for future advancements in <i>camera-controlled</i> video generation.
           </p>
-        </div>
-        <div class="columns is-vcentered interpolation-panel">
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_start.jpg"
-                 class="interpolation-image"
-                 alt="Interpolate start reference image."/>
-            <p>Start Frame</p>
-          </div>
-          <div class="column interpolation-video-column">
-            <div id="interpolation-image-wrapper">
-              Loading...
-            </div>
-            <input class="slider is-fullwidth is-large is-info"
-                   id="interpolation-slider"
-                   step="1" min="0" max="100" value="0" type="range">
-          </div>
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_end.jpg"
-                 class="interpolation-image"
-                 alt="Interpolation end reference image."/>
-            <p class="is-bold">End Frame</p>
-          </div>
         </div>
         <br/>
-        <!--/ Interpolating. -->
 
-        <!-- Re-rendering. -->
-        <h3 class="title is-4">Re-rendering the input video</h3>
+        <h2 class="title is-3">DataDoP Dataset</h2>
+          <h3 class="title is-4">Statistics</h3>
+          <div class="content has-text-justified">
+            <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+              <thead>
+                <tr>
+                  <th rowspan="2">Dataset</th>
+                  <th rowspan="2">Traj Type</th>
+                  <th rowspan="2">Domain</th>
+                  <th colspan="4">Caption</th>
+                  <th colspan="3">Statistics</th>
+                </tr>
+                <tr>
+                  <th>Traj</th>
+                  <th>Scene</th>
+                  <th>Intent</th>
+                  <th>#Vocab</th>
+                  <th>#Sample</th>
+                  <th>#Frame</th>
+                  <th>#Avg (s)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>MVImgNet</td>
+                  <td>Object/Scene-Centric</td>
+                  <td>Captured</td>
+                  <td style="text-align: center"><i class="fas fa-times"></i></td>
+                  <td style="text-align: center"><i class="fas fa-times"></i></td>
+                  <td style="text-align: center"><i class="fas fa-times"></i></td>
+                  <td>-</td>
+                  <td>22K</td>
+                  <td>6.5M</td>
+                  <td>10</td>
+                </tr>
+                <tr>
+                  <td>RealEstate10k</td>
+                  <td>Object/Scene-Centric</td>
+                  <td>Youtube</td>
+                  <td style="text-align: center"><i class="fas fa-times"></i></td>
+                  <td style="text-align: center"><i class="fas fa-times"></i></td>
+                  <td style="text-align: center"><i class="fas fa-times"></i></td>
+                  <td>-</td>
+                  <td><b>79K</b></td>
+                  <td>11M</td>
+                  <td>5.5</td>
+                </tr>
+                <tr>
+                  <td>DL3DV-10K</td>
+                  <td>Object/Scene-Centric</td>
+                  <td>Captured</td>
+                  <td style="text-align: center"><i class="fas fa-times"></i></td>
+                  <td style="text-align: center"><i class="fas fa-times"></i></td>
+                  <td style="text-align: center"><i class="fas fa-times"></i></td>
+                  <td>-</td>
+                  <td>10K</td>
+                  <td><b>51M</b></td>
+                  <td><b>85</b></td>
+                </tr>
+                <tr>
+                  <td>CCD</td>
+                  <td>Tracking</td>
+                  <td>Synthetic</td>
+                  <td style="text-align: center"><i class="fas fa-check"></i></td>
+                  <td style="text-align: center"><i class="fas fa-times"></i></td>
+                  <td style="text-align: center"><i class="fas fa-times"></i></td>
+                  <td>48</td>
+                  <td>25K</td>
+                  <td>4.5M</td>
+                  <td>7.2</td>
+                </tr>
+                <tr>
+                  <td>E.T.</td>
+                  <td>Tracking</td>
+                  <td><b>Film</b></td>
+                  <td style="text-align: center"><i class="fas fa-check"></i></td>
+                  <td style="text-align: center"><i class="fas fa-times"></i></td>
+                  <td style="text-align: center"><i class="fas fa-times"></i></td>
+                  <td>1790</td>
+                  <td><b>115K</b></td>
+                  <td><b>11M</b></td>
+                  <td>3.8</td>
+                </tr>
+                <tr>
+                  <td><b>DataDoP (Ours)</b></td>
+                  <td><b>Free-Moving</b></td>
+                  <td><b>Film</b></td>
+                  <td style="text-align: center"><i class="fas fa-check"></i></td>
+                  <td style="text-align: center"><i class="fas fa-check"></i></td>
+                  <td style="text-align: center"><i class="fas fa-check"></i></td>
+                  <td><b>8698</b></td>
+                  <td>29K</td>
+                  <td><b>11M</b></td>
+                  <td><b>14.4</b></td>
+                </tr>
+              </tbody>
+            </table>
+            <p>
+              <b>DataDoP Statistics.</b> 
+              We compare the DataDoP dataset to other datasets containing camera trajectories. DataDoP is a large dataset focusing on artistic, free-moving trajectories, each accompanied by high-quality caption annotations. The provided captions detail the camera movements, their interactions with scene content, and the underlying directorial intent. 
+              To capture more intricate camera movements, each video clip spans 10-20 seconds, averaging 14.4 seconds.
+            </p>
+          </div>
+
+          <h3 class="title is-4">Cases</h3>
+          <div class="content has-text-justified">
+            <!-- Case 1 -->
+            <div class="case-container" style="margin-bottom: 3rem;">
+              <div class="columns" style="align-items: flex-start;">
+                <div class="column is-6">
+                  <div class="video-container" style="display: flex; align-items: flex-start;">
+                    <video class="video" controls muted loop playsinline style="width: 100%; border-radius: 8px;">
+                      <source src="./static/images/dataset-case1.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                </div>
+                <div class="column is-6">
+                  <div class="image-container" style="height: 264px; overflow: hidden; border-radius: 8px; display: flex; align-items: flex-start;">
+                    <img src="./static/images/dataset-case1.png" style="width: 100%; height: 100%; object-fit: cover;"/>
+                  </div>
+                </div>
+              </div>
+              <div class="columns" style="margin-top: 0.rem;">
+                <div class="column is-12">
+                  <div class="caption-container" style="display: flex; flex-direction: row; gap: 1rem;">
+                    <div class="caption-box" style="flex: 1; background-color: #f5f5f5; padding: 1rem; border-radius: 8px;">
+                      <h4 class="title is-6" style="color: #444444; margin-bottom: 0.3rem;">Motion Caption</h4>
+                      <p style="font-size: 0.9rem;">The camera <span style="color: rgb(150, 0, 0)"><b>moves forward</b></span> and <span style="color: rgb(160, 120, 2)"><b>remains static</b></span> for the rest of the duration.</p>
+                    </div>
+                    <div class="caption-box" style="flex: 1; background-color: #f5f5f5; padding: 1rem; border-radius: 8px;">
+                      <h4 class="title is-6" style="color: #444444; margin-bottom: 0.3rem;">Directorial Caption</h4>
+                      <p style="font-size: 0.9rem;">The camera <span style="color: rgb(56, 87, 35)"><b>moves forward, then remains static</b></span>, focusing closely on <span style="color: rgb(31, 78, 121)"><b>the subject's expressions and gestures</b></span>. This <span style="color: rgb(121, 48, 160)"><b>highlights their interactions</b></span> without any background distractions.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Case 2 -->
+            <div class="case-container">
+              <div class="columns" style="align-items: flex-start;">
+                <div class="column is-6">
+                  <div class="video-container" style="display: flex; align-items: flex-start; height: 264px; overflow: hidden;">
+                    <video class="video" controls muted loop playsinline style="width: 100%; height: 100%; border-radius: 8px; object-fit: cover;">
+                      <source src="./static/images/dataset-case2.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                </div>
+                <div class="column is-6">
+                  <div class="image-container" style="height: 264px; overflow: hidden; border-radius: 8px; display: flex; align-items: flex-start;">
+                    <img src="./static/images/dataset-case2.png" style="width: 100%; height: 100%; object-fit: cover;"/>
+                  </div>
+                </div>
+              </div>
+              <div class="columns" style="margin-top: 0.rem;">
+                <div class="column is-12">
+                  <div class="caption-container" style="display: flex; flex-direction: row; gap: 1rem;">
+                    <div class="caption-box" style="flex: 1; background-color: #f5f5f5; padding: 1rem; border-radius: 8px;">
+                      <h4 class="title is-6" style="color: #444444; margin-bottom: 0.3rem;">Motion Caption</h4>
+                      <p style="font-size: 0.9rem;">The camera <span style="color: rgb(150, 0, 0)"><b>moves left while yawing left</b></span>, <span style="color: rgb(160, 120, 2)"><b>continues moving left</b></span>, and then <span style="color: rgb(60, 120, 40)"><b>moves left while yawing right</b></span>.</p>
+                    </div>
+                    <div class="caption-box" style="flex: 1; background-color: #f5f5f5; padding: 1rem; border-radius: 8px;">
+                      <h4 class="title is-6" style="color: #444444; margin-bottom: 0.3rem;">Directorial Caption</h4>
+                      <p style="font-size: 0.9rem;">The camera <span style="color: rgb(56, 87, 35)"><b>moves left while yawing left</b></span>, <span style="color: rgb(31, 78, 121)"><b>showcasing the desert landscape and hills</b></span>. It continues left, then shifts to yaw right, <span style="color: rgb(121, 48, 160)"><b>highlighting the terrain's contours and depth</b></span>.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <p style="margin-top: 2rem;">
+              <b>DataDoP Cases.</b> 
+              We showcase several representative cases from our dataset. Each case includes the original video frames, camera trajectory visualization, and corresponding motion and directorial captions.
+            </p>
+          </div>
+        <br/>
+        
+        <!-- Method -->
+        <h2 class="title is-3">GenDoP Method</h2>
         <div class="content has-text-justified">
+          <img src="./static/images/network1_00.png"/>
           <p>
-            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-            viewpoint such as a stabilized camera by playing back the training deformations.
+            <b>Our Auto-regressive Generation Model.</b> 
+            Our model supports multi-modal inputs and generates trajectories based on these inputs. By treating the task as an auto-regressive next-token prediction problem, the model sequentially generates trajectories, with each new pose prediction influenced by previous camera states and input conditions.
           </p>
         </div>
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="75%">
-            <source src="./static/videos/replay.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <!--/ Re-rendering. -->
-
-      </div>
-    </div>
-    <!--/ Animation. -->
-
-
-    <!-- Concurrent Work. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Related Links</h2>
-
-        <div class="content has-text-justified">
-          <p>
-            There's a lot of excellent work that was introduced around the same time as ours.
-          </p>
-          <p>
-            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.
-          </p>
-          <p>
-            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
-            both use deformation fields to model non-rigid scenes.
-          </p>
-          <p>
-            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
-          </p>
-          <p>
-            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
-          </p>
-        </div>
-      </div>
-    </div>
-    <!--/ Concurrent Work. -->
-
   </div>
 </section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Results -->
+    <h2 class="title is-3">Results</h2>
+
+    <!-- Text-to-Trajectory -->
+    <h3 class="title is-4">Text-conditioned</h3>
+    <div class="content has-text-justified">
+      <div class="container">
+
+        <div id="results-carousel-horizontal" class="carousel results-carousel">
+          <img src="./static/images/t2t-case4.png" alt="Trajectory 4" width="100%" preload>
+          <img src="./static/images/t2t-case5.png" alt="Trajectory 5" width="100%" preload>
+          <img src="./static/images/t2t-case2.png" alt="Trajectory 2" width="100%" preload>
+          <img src="./static/images/t2t-case1.png" alt="Trajectory 1" width="100%" preload>    
+          <img src="./static/images/t2t-case3.png" alt="Trajectory 3" width="100%" preload>
+        </div>
+
+      </div>
+      <!-- <p>
+        <b>Additional Results.</b> 
+        We demonstrate how <a href="https://trajectorycrafter.github.io/">TrajectoryCrafter</a> applies our trajectory generation method to camera-controlled video, ensuring the generated sequences align with the provided camera descriptions and motion criteria.
+
+      </p> -->
+
+    </div>
+
+
+
+    <!-- Text-to-Trajectory -->
+    <h3 class="title is-4">RGBD & Text-conditioned</h3>
+    <div class="content has-text-justified">
+      <div class="container">
+
+        <div id="results-carousel-horizontal" class="carousel results-carousel">
+      
+          <img src="./static/images/vi_p1.jpg" alt="Trajectory 1" width="100%" preload>
+      
+          <img src="./static/images/vi_p2.jpg" alt="Trajectory 2" width="100%" preload>
+      
+          <img src="./static/images/vi_p3.jpg" alt="Trajectory 3" width="100%" preload>
+      
+          <img src="./static/images/vi_p4.jpg" alt="Trajectory 4" width="100%" preload>
+      
+          <img src="./static/images/vi_p5.jpg" alt="Trajectory 5" width="100%" preload>
+      
+          <img src="./static/images/vi_p6.jpg" alt="Trajectory 6" width="100%" preload>
+      
+          <img src="./static/images/vi_p7.jpg" alt="Trajectory 7" width="100%" preload>
+      
+        </div>
+  
+      </div>
+      <!-- <p>
+        <b>Additional Results.</b> 
+        We demonstrate how <a href="https://trajectorycrafter.github.io/">TrajectoryCrafter</a> applies our trajectory generation method to camera-controlled video, ensuring the generated sequences align with the provided camera descriptions and motion criteria.
+
+      </p> -->
+  
+    </div>
+
+    <!-- Text-to-Trajectory -->
+    <h3 class="title is-4">Application</h3>
+    <div class="content has-text-justified">
+      <div class="container">
+
+        <div id="results-carousel-horizontal" class="carousel results-carousel">
+  
+          <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+              <source src="./static/images/application-case1.mov" type="video/mp4">
+          </video>
+  
+          <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+              <source src="./static/images/application-case2.mov" type="video/mp4">
+          </video>
+  
+          <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+              <source src="./static/images/application-case5.mov" type="video/mp4">
+          </video>
+  
+          <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+              <source src="./static/images/application-case3.mov" type="video/mp4">
+          </video>
+  
+          <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+              <source src="./static/images/application-case4.mov" type="video/mp4">
+          </video>
+  
+        </div>
+  
+      </div>
+      <p>
+        <b>Additional Results.</b> 
+        We demonstrate how <a href="https://trajectorycrafter.github.io/">TrajectoryCrafter</a> applies our trajectory generation method to camera-controlled video, ensuring the generated sequences align with the provided camera descriptions and motion criteria.
+      </p>
+    </div>
+
+    <!-- Image-to-Trajectory
+    <h3 class="title is-4">Image-to-Trajectory</h3>
+    <div class="content has-text-justified">
+      <div class="container">
+
+        <div id="results-carousel-horizontal" class="carousel results-carousel">
+  
+          <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+              <source src="./static/videos/vi_p1.mp4" type="video/mp4">
+          </video>
+  
+          <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+              <source src="./static/videos/vi_p2.mp4" type="video/mp4">
+          </video>
+  
+          <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+              <source src="./static/videos/vi_p3.mp4" type="video/mp4">
+          </video>
+  
+          <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+              <source src="./static/videos/vi_p4.mp4" type="video/mp4">
+          </video>
+  
+          <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+              <source src="./static/videos/vi_p5.mp4" type="video/mp4">
+          </video>
+  
+          <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+            <source src="./static/videos/vi_p6.mp4" type="video/mp4">
+          </video>
+  
+          <video muted autoplay="autoplay" loop="loop" width="100%" preload controls>
+            <source src="./static/videos/vi_p7.mp4" type="video/mp4">
+          </video>
+  
+        </div>
+  
+      </div>
+  
+    </div> -->
+  </div>
+</section>
+    <br/>
 
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{park2021nerfies,
+    <pre><code>
+  <!-- @article{park2021nerfies,
   author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
   title     = {Nerfies: Deformable Neural Radiance Fields},
   journal   = {ICCV},
   year      = {2021},
-}</code></pre>
+} -->
+</code></pre>
   </div>
 </section>
 
@@ -458,10 +585,10 @@
   <div class="container">
     <div class="content has-text-centered">
       <a class="icon-link"
-         href="./static/videos/nerfies_paper.pdf">
+         href="./static/videos/TODO.pdf">
         <i class="fas fa-file-pdf"></i>
       </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+      <a class="icon-link" href="https://github.com/3DTopia/GenDoP" class="external-link" disabled>
         <i class="fab fa-github"></i>
       </a>
     </div>
@@ -469,16 +596,11 @@
       <div class="column is-8">
         <div class="content">
           <p>
-            This website is licensed under a <a rel="license"
-                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
+            Source code mainly borrowed from <a href="https://keunhong.com/">Keunhong Park</a>'s <a
+                                href="https://nerfies.github.io/">Nerfies website</a>.
           </p>
           <p>
-            This means you are free to borrow the <a
-              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
-            we just ask that you link back to this page in the footer.
-            Please remember to remove the analytics code included in the header of the website which
-            you do not want on your website.
+            Please contact <a href="https://kszpxxzmc.github.io/">Mengchen Zhang</a> for feedback and questions.
           </p>
         </div>
       </div>
