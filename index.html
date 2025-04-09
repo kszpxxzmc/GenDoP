@@ -34,6 +34,34 @@
   <link rel="stylesheet" href="./static/css/index.css">
   <link rel="icon" href="./static/images/favicon.svg">
 
+  <style>
+    #rgbd-carousel {
+      width: 100%;
+      overflow: hidden;
+    }
+    #rgbd-carousel .item-1 {
+      width: 50%;
+      float: left;
+      padding: 0 5px;
+      box-sizing: border-box;
+    }
+    #rgbd-carousel img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .columns.is-multiline {
+      margin: 0 -0.5rem;
+    }
+    .column.is-half {
+      padding: 0.5rem;
+    }
+    .column.is-half img {
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+  </style>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
   <script src="./static/js/bulma-carousel.min.js"></script>
@@ -41,17 +69,6 @@
   <script src="./static/js/index.js"></script>
 </head>
 <body>
-
-<script>
-  $(window).on('load', function () {
-      bulmaCarousel.attach('#results-carousel-horizontal', {
-          slidesToScroll: 1,
-          slidesToShow: 1,
-          loop: true,
-          autoplay: false,
-      });
-  });
-</script>
 
 <!-- <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
@@ -466,20 +483,42 @@
     <h3 class="title is-4">RGBD & Text-conditioned</h3>
     <div class="content has-text-justified">
       <div class="container">
-        <div id="results-carousel-horizontal" class="carousel results-carousel">
-          <img src="./static/images/i2t-case1.png" alt="Trajectory 1" class="carousel-image" preload>
-          <img src="./static/images/i2t-case2.png" alt="Trajectory 2" class="carousel-image" preload>
-          <img src="./static/images/i2t-case3.png" alt="Trajectory 3" class="carousel-image" preload>
-          <img src="./static/images/i2t-case4.png" alt="Trajectory 4" class="carousel-image" preload>
+        <div class="grid-container">
+          <div class="grid-item">
+            <img src="./static/images/i2t-case1.png" alt="Trajectory 1">
+          </div>
+          <div class="grid-item">
+            <img src="./static/images/i2t-case2.png" alt="Trajectory 2">
+          </div>
+          <div class="grid-item">
+            <img src="./static/images/i2t-case3.png" alt="Trajectory 3">
+          </div>
+          <div class="grid-item">
+            <img src="./static/images/i2t-case4.png" alt="Trajectory 4">
+          </div>
         </div>
       </div>
     </div>
 
     <style>
-    .carousel-image {
-      flex: 0 0 50%; /* 每张图片占容器50%宽度 */
-      min-width: 50%; /* 防止图片缩小 */
-      padding: 0 0%; /* 添加图片间距 */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 10px;
+      width: 100%;
+    }
+    .grid-item {
+      width: 100%;
+      height: 100%;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .grid-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
     </style>
 
